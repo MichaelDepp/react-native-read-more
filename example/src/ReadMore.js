@@ -183,7 +183,7 @@ const ReadMore = ({
             {...restProps}
             onPress={toggle}
             style={seeLessStyle}>
-            {hiddenTextHeightWithSeeLess > hiddenTextHeight ? '\n' : ' '}
+            {hiddenTextHeightWithSeeLess > hiddenTextHeight ? '\n\n' : '\n'}
             {seeLessText}
           </TextComponent>
         )}
@@ -195,7 +195,7 @@ const ReadMore = ({
             {...restProps}
             onPress={toggle}
             style={[style, seeMoreStyle]}>
-            {`${ellipsis} ${seeMoreText}`}
+            {`${seeMoreText}`}
           </TextComponent>
         </View>
       )}
@@ -215,7 +215,6 @@ const styles = StyleSheet.create({
     color: 'transparent',
   },
   seeMoreContainer: {
-    position: 'absolute',
     right: 0,
     bottom: 0,
     flexDirection: 'row',
